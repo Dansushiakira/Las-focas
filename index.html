@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Las focas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff4f7; --surface:#ffffff; --ink:#5a3a4a; --muted:#8c6b7b;
+  --pink:#f7b6cb; --rose:#ffd9e4; --mint:#cdeee3; --lilac:#e3d7f7; --sky:#d4e8fb; --peach:#ffe3cf;
+  --sea:#cfe7f7;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#2a1d25; --surface:#3a2832; --ink:#fde7ef; --muted:#d3b2c0;
+    --pink:#c97b98; --rose:#4a313c; --mint:#35504a; --lilac:#463a5c; --sky:#31465a; --peach:#5a4236; --sea:#33465a;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#2a1d25; --surface:#3a2832; --ink:#fde7ef; --muted:#d3b2c0;
+  --pink:#c97b98; --rose:#4a313c; --mint:#35504a; --lilac:#463a5c; --sky:#31465a; --peach:#5a4236; --sea:#33465a;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Fredoka','Nunito',system-ui,sans-serif;font-weight:600;line-height:1.15;margin:0}
+main{max-width:860px;margin:0 auto;padding:0 20px 56px}
+.hero{text-align:center;padding:48px 0 8px}
+.hero svg{width:min(300px,70%);height:auto}
+.hero h1{font-size:clamp(2.6rem,9vw,4.4rem);margin-top:10px}
+.hero p{max-width:34em;margin:14px auto 0;color:var(--muted);font-size:1.1rem}
+.wave{display:block;width:100%;height:46px;margin:30px 0 6px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:22px}
+.card{border-radius:26px;padding:22px 22px 24px}
+.card h3{font-size:1.3rem;margin-bottom:6px}
+.card p{margin:0}
+.c1{background:var(--rose)} .c2{background:var(--sky)} .c3{background:var(--mint)} .c4{background:var(--lilac)} .c5{background:var(--peach)}
+.c6{background:var(--rose)}
+.card .big{font-family:'Fredoka',sans-serif;font-size:2.2rem;font-weight:600;display:block;margin-bottom:2px}
+.wide{margin-top:44px;background:var(--surface);border-radius:32px;padding:28px 24px;border:3px dashed var(--pink)}
+.wide h2{font-size:1.8rem;margin-bottom:10px}
+.wide p{margin:0 0 10px;max-width:40em}
+.wide p:last-child{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.chip{background:var(--rose);border-radius:999px;padding:6px 16px;font-weight:600}
+h2.sec{font-size:1.8rem;margin-top:44px}
+footer{text-align:center;color:var(--muted);margin-top:44px;font-size:.95rem}
+.hero svg .bob{animation:bob 4s ease-in-out infinite;transform-origin:center}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@media (prefers-reduced-motion:reduce){.hero svg .bob{animation:none}}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <svg viewBox="0 0 300 200" role="img" aria-label="Dibujo de una foca rosada">
+      <ellipse cx="150" cy="178" rx="120" ry="14" fill="var(--sea)"/>
+      <g class="bob">
+        <ellipse cx="150" cy="120" rx="105" ry="56" fill="var(--pink)"/>
+        <path d="M232 132 q44 -8 52 20 q-34 6 -56 -6z" fill="var(--pink)"/>
+        <circle cx="96" cy="86" r="44" fill="var(--pink)"/>
+        <ellipse cx="84" cy="100" rx="26" ry="19" fill="var(--rose)"/>
+        <circle cx="78" cy="76" r="5.5" fill="#5a3a4a"/>
+        <circle cx="106" cy="76" r="5.5" fill="#5a3a4a"/>
+        <circle cx="76" cy="74" r="1.8" fill="#fff"/><circle cx="104" cy="74" r="1.8" fill="#fff"/>
+        <ellipse cx="91" cy="92" rx="7" ry="5" fill="#5a3a4a"/>
+        <path d="M91 97 q-6 8 -13 5 M91 97 q6 8 13 5" stroke="#5a3a4a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <circle cx="62" cy="92" r="7" fill="#ff9fbd" opacity=".6"/><circle cx="122" cy="92" r="7" fill="#ff9fbd" opacity=".6"/>
+        <ellipse cx="140" cy="150" rx="26" ry="11" transform="rotate(-18 140 150)" fill="var(--rose)"/>
+      </g>
+    </svg>
+    <h1>Las focas</h1>
+    <p>Mamíferos marinos de bigotes largos, ojos enormes y mucho talento para nadar y para descansar al sol.</p>
+  </header>
+
+  <svg class="wave" viewBox="0 0 800 46" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 23 q50 -26 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V46 H0z" fill="var(--sea)"/>
+  </svg>
+
+  <h2 class="sec">Datos curiosos</h2>
+  <section class="facts">
+    <article class="card c1"><span class="big">33</span><h3>especies</h3><p>Viven desde el Ártico hasta la Antártida, y algunas incluso en lagos de agua dulce.</p></article>
+    <article class="card c2"><span class="big">≈ 30 min</span><h3>bajo el agua</h3><p>Muchas pueden contener la respiración casi media hora, y algunas elefantes marinos, más de una hora.</p></article>
+    <article class="card c3"><h3>Bigotes sensibles</h3><p>Sus vibrisas detectan las pequeñas ondas que deja un pez al nadar, incluso en la oscuridad.</p></article>
+    <article class="card c4"><h3>Siestas flotantes</h3><p>Pueden dormir en el agua y también en tierra, con la mitad del cerebro más alerta en algunos casos.</p></article>
+    <article class="card c5"><h3>Cachorros blancos</h3><p>Las crías de varias especies nacen con un pelaje suave y claro llamado lanugo.</p></article>
+    <article class="card c6"><h3>Gran apetito</h3><p>Comen peces, calamares y crustáceos, según la especie y el lugar donde viven.</p></article>
+  </section>
+
+  <section class="wide">
+    <h2>Foca o león marino</h2>
+    <p>Se parecen, pero no son lo mismo. Las focas verdaderas no tienen orejas externas y se desplazan en tierra arrastrándose sobre la barriga. Los leones marinos sí tienen orejitas visibles y pueden apoyarse en sus aletas delanteras para caminar.</p>
+    <div class="chips"><span class="chip">Sin orejas externas</span><span class="chip">Aletas cortas</span><span class="chip">Se arrastran</span></div>
+  </section>
+
+  <footer>Hecho con cariño para los amantes de las focas 🦭</footer>
+</main>
+</body>
+</html>
